@@ -9,113 +9,95 @@ import {
 } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 
+const BASE = import.meta.env.BASE_URL;
+
 const products = [
-  {
-    name: "Hamilton",
-    code: "YT-60A",
-    category: "melamin",
-    image: "/images/applications/hamilton-yt-60a-app.jpg",
-    app: "/images/applications/hamilton-yt-60a-app.jpg",
-    sourceUrl: "https://www.yildizentegre.com/en/products/melamine-faced-mdfpb/hamilton-yt-60a",
-    desc: {
-      ar: "درجة خشبية أنيقة بطابع عصري، مناسبة للمطابخ والخزائن والطاولات والديكور العملي.",
-      tr: "Modern karakterli şık ahşap tonu; mutfak, dolap, masa ve dekoratif kullanım için uygundur.",
-    },
-  },
   {
     name: "Kaman Ceviz",
     code: "VT-810",
     category: "melamin",
-    image: "/images/applications/kaman-ceviz-vt-810-app.jpg",
-    app: "/images/applications/kaman-ceviz-vt-810-app.jpg",
-    sourceUrl: "https://www.yildizentegre.com/urunler/mdflam-suntalam/kaman-ceviz-vt-810",
+    image: BASE + "images/products/kaman-ceviz-vt-810.jpg",
+    app: BASE + "images/applications/kaman-ceviz-vt-810-app.jpg",
     desc: {
-      ar: "لون جوز دافئ وفخم يعطي المطابخ والخزائن مظهر خشب طبيعي قوي وراقي.",
-      tr: "Mutfak ve dolaplara doğal, güçlü ve prestijli ceviz görünümü kazandıran sıcak ton.",
+      ar: "لون خشبي دافئ يمنح المطابخ والخزائن إحساساً طبيعياً وفاخراً.",
+      tr: "Mutfak ve dolaplara sıcak, doğal ve şık bir ahşap görünümü kazandırır.",
     },
   },
   {
     name: "Atlantik Cam",
     code: "VT-657",
     category: "melamin",
-    image: "/images/applications/atlantik-cam-vt-657-app.jpg",
-    app: "/images/applications/atlantik-cam-vt-657-app.jpg",
-    sourceUrl: "https://www.yildizentegre.com/urunler/mdflam-suntalam/atlantik-cam-vt-657",
+    image: BASE + "images/products/atlantik-cam-vt-657.jpg",
+    app: BASE + "images/applications/atlantik-cam-vt-657-app.jpg",
     desc: {
-      ar: "نقشة خشب طبيعية وعملية، مناسبة للأثاث العصري، المطابخ، الخزائن، وغرف النوم.",
-      tr: "Modern mobilyalar, mutfaklar, dolaplar ve yatak odaları için doğal ve kullanışlı ahşap dokusu.",
+      ar: "نقشة خشب طبيعية مناسبة للأثاث العصري والمساحات العملية.",
+      tr: "Modern mobilyalar ve kullanışlı yaşam alanları için doğal ahşap dokusu.",
     },
   },
   {
     name: "Atlantis",
     code: "VT-293",
     category: "melamin",
-    image: "/images/applications/atlantis-vt-293-app.jpg",
-    app: "/images/applications/atlantis-vt-293-app.jpg",
-    sourceUrl: "https://www.yildizentegre.com/urunler/mdflam-suntalam/atlantis-vt-293",
+    image: BASE + "images/products/atlantis-vt-293.jpg",
+    app: BASE + "images/applications/atlantis-vt-293-app.jpg",
     desc: {
-      ar: "لون خشبي فاتح وهادئ يفتح المساحة ويعطي الخزائن وغرف النوم لمسة ناعمة.",
-      tr: "Mekanı ferah gösteren, dolap ve yatak odalarına yumuşak bir görünüm veren açık ahşap tonu.",
+      ar: "خامة هادئة بلون خشبي فاتح تناسب غرف النوم والخزائن والديكور.",
+      tr: "Yatak odası, dolap ve dekoratif alanlar için sakin ve açık ahşap yüzey.",
     },
   },
   {
     name: "Vario Vizon",
     code: "VT-265",
     category: "highGloss",
-    image: "/images/applications/vario-vizon-vt-265-app.jpg",
-    app: "/images/applications/vario-vizon-vt-265-app.jpg",
-    sourceUrl: "https://www.yildizentegre.com/urunler/mdflam-suntalam/vario-vizon-vt-265",
+    image: BASE + "images/products/vario-vizon-vt-265.jpg",
+    app: BASE + "images/applications/vario-vizon-vt-265-app.jpg",
     desc: {
-      ar: "لون فيزون هادئ بلمسة فخمة، مناسب للمطابخ الحديثة والخزائن ذات الطابع الراقي.",
-      tr: "Modern mutfaklar ve prestijli dolap tasarımları için sakin, zarif ve lüks vizon tonu.",
+      ar: "لون هادئ وفخم يعطي المساحات مظهراً ناعماً وحديثاً.",
+      tr: "Mekanlara yumuşak, modern ve zarif bir görünüm kazandıran özel ton.",
     },
   },
   {
     name: "Sedef Krem",
     code: "VT-568",
     category: "highGloss",
-    image: "/images/applications/sedef-krem-vt-568-app.jpg",
-    app: "/images/applications/sedef-krem-vt-568-app.jpg",
-    sourceUrl: "https://www.yildizentegre.com/urunler/mdflam-suntalam/sedef-krem-vt-568",
+    image: BASE + "images/products/sedef-krem-vt-568.jpg",
+    app: BASE + "images/applications/sedef-krem-vt-568-app.jpg",
     desc: {
-      ar: "كريمي لؤلؤي أنيق يضيف إضاءة ونعومة للمطابخ، الخزائن، والمكاتب.",
-      tr: "Mutfak, dolap ve ofis alanlarına aydınlık ve zarafet katan inci krem tonu.",
+      ar: "درجة كريمية أنيقة تضيف إضاءة ونعومة للمطابخ والخزائن.",
+      tr: "Mutfak ve dolaplara aydınlık, zarif ve yumuşak bir krem görünüm verir.",
     },
   },
   {
     name: "Silves",
     code: "YT-Z39",
     category: "lakPanel",
-    image: "/images/applications/silves-yt-z39-app.jpg",
-    app: "/images/applications/silves-yt-z39-app.jpg",
-    sourceUrl: "https://www.yildizentegre.com/urunler/mdflam-suntalam/silves-yt-z39",
+    image: BASE + "images/products/silves-yt-z39.jpg",
+    app: BASE + "images/applications/silves-yt-z39-app.jpg",
     desc: {
-      ar: "ملمس حجري فاخر مناسب للجدران الديكورية، الطاولات، والتصاميم المميزة.",
-      tr: "Dekoratif duvarlar, masalar ve özel tasarımlar için lüks taş dokulu yüzey.",
+      ar: "ملمس حجري فاخر مناسب للجدران الديكورية والتصاميم المميزة.",
+      tr: "Dekoratif duvarlar ve özel tasarımlar için lüks taş dokusu.",
     },
   },
   {
     name: "Metalik Gri",
     code: "VT-344",
     category: "lakPanel",
-    image: "/images/applications/metalik-gri-vt-344-app.jpg",
-    app: "/images/applications/metalik-gri-vt-344-app.jpg",
-    sourceUrl: "https://www.yildizentegre.com/urunler/mdflam-suntalam/metalik-gri-vt-344",
+    image: BASE + "images/products/metalik-gri-vt-344.jpg",
+    app: BASE + "images/applications/metalik-gri-vt-344-app.jpg",
     desc: {
-      ar: "رمادي معدني عصري يعطي المشاريع الحديثة مظهر قوي، هادئ، وفخم.",
-      tr: "Modern projelere güçlü, sade ve prestijli bir görünüm kazandıran metalik gri.",
+      ar: "رمادي معدني عصري يناسب المشاريع الحديثة والألوان الهادئة.",
+      tr: "Modern projeler ve sade renk paletleri için çağdaş metalik gri.",
     },
   },
   {
     name: "Metalik Antrasit",
     code: "YT-36C",
     category: "lakPanel",
-    image: "/images/applications/metalik-antrasit-yt-36c-app.jpg",
-    app: "/images/applications/metalik-antrasit-yt-36c-app.jpg",
-    sourceUrl: "https://www.yildizentegre.com/urunler/mdflam-suntalam/metalik-antrasit-yt-36c",
+    image: BASE + "images/products/metalik-antrasit-yt-36c.jpg",
+    app: BASE + "images/applications/metalik-antrasit-yt-36c-app.jpg",
     desc: {
-      ar: "أنثراسيت معدني فاخر يعطي المطابخ والخزائن قوة وأناقة ولمسة VIP.",
-      tr: "Mutfak ve dolaplara güçlü, zarif ve VIP bir metalik antrasit görünüm kazandırır.",
+      ar: "أنثراسيت فاخر يعطي التصميم قوة وأناقة ولمسة عصرية.",
+      tr: "Tasarıma güçlü, modern ve prestijli bir antrasit görünüm kazandırır.",
     },
   },
 ];
@@ -126,9 +108,9 @@ const translations = {
     nav: ["الرئيسية", "الفئات", "الألوان", "التطبيقات", "تواصل"],
     badge: "الوكيل الحصري لشركة الواحة يلدز للأخشاب والملمين التركي",
     heroTop: "ألواح YILDIZ التركية",
-    heroMain: "فخامة عملية للمطابخ، الخزائن، والطاولات العصرية",
+    heroMain: "فخامة عملية للمطابخ، الخزائن، والأثاث العصري",
     heroSub:
-      "ملمين، هاي غلوس، ولاك بانيل بجودة تركية، ضغط عالي جداً، قص وحرف ماكينة، وخبرة نجارة 29 سنة.",
+      "ملمين، هاي غلوس، ولاك بانيل بقياسات عملية وجودة عالية وتشطيبات تليق بالمشاريع الحديثة.",
     ctaColors: "استعرض الألوان",
     ctaApps: "شاهد التطبيقات",
     ctaCatalog: "اطلب كتالوج",
@@ -148,12 +130,11 @@ const translations = {
     categoryTitle: "فئات المنتجات",
     categorySub: "اختَر الخامة المناسبة حسب الاستخدام، اللمعة، المتانة، والمظهر النهائي.",
     colorsTitle: "الألوان والتطبيقات",
-    colorsSub: "اختَر اللون وشاهد مباشرة كيف يظهر داخل مطبخ، خزائن، طاولة أو ديكور.",
+    colorsSub: "اختَر اللون وشاهد مباشرة كيف يظهر داخل المساحات.",
     appLabel: "معاينة تطبيق واقعي",
-    colorLabel: "Renk Kodu",
+    colorLabel: "كود اللون",
     categoryLabel: "الفئة",
     productInfo: "وصف اللون",
-    source: "صفحة المنتج الرسمية",
     orderColor: "اطلب هذا اللون",
     finalTitle: "جاهز تختار خامتك؟",
     finalSub: "تواصل معنا للكتالوج، الأسعار، القص، الحرف، وتفصيل المشاريع.",
@@ -161,9 +142,9 @@ const translations = {
     socialTitle: "السوشال ميديا",
     categories: {
       all: ["الكل", "كل الألوان"],
-      melamin: ["ملمين", "280×210", "ضغط عالي، عملي، مقاوم، مناسب للمطابخ، الخزائن، الأبواب، غرف النوم والطاولات."],
-      highGloss: ["هاي غلوس", "280×122", "سطح مرآة فاخر، لمعان عصري، مثالي للمطابخ والخزائن والمكاتب الحديثة."],
-      lakPanel: ["لاك بانيل", "280×210", "قلب MDF متين، طبقات ديكور وبرايمر، حماية UV، مقاومة للخدش والرطوبة والحرارة."],
+      melamin: ["ملمين", "280×210", "خامة عملية بضغط عالي مناسبة للمطابخ، الخزائن، الأبواب، وغرف النوم."],
+      highGloss: ["هاي غلوس", "280×122", "سطح مرآة فاخر ولمعة عصرية ترفع قيمة أي مساحة."],
+      lakPanel: ["لاك بانيل", "280×210", "قلب MDF متين، طبقات برايمر، حماية UV، مقاومة للخدش والرطوبة والحرارة."],
     },
   },
   tr: {
@@ -171,9 +152,9 @@ const translations = {
     nav: ["Ana Sayfa", "Kategoriler", "Renkler", "Uygulamalar", "İletişim"],
     badge: "Al-Waha, YILDIZ Türk ahşap ve melamin panellerinin özel bayisi",
     heroTop: "YILDIZ Türk Panelleri",
-    heroMain: "Mutfak, dolap, masa ve modern mobilyalar için premium yüzeyler",
+    heroMain: "Mutfak, dolap ve modern mobilyalar için premium yüzeyler",
     heroSub:
-      "Melamin, high gloss ve lak panel seçenekleri; çok yüksek pres kalitesi, makine kesim, kenar bantlama ve 29 yıllık marangozluk deneyimi.",
+      "Melamin, high gloss ve lak panel seçenekleri; modern projeler için kaliteli ölçüler ve güçlü yüzeyler.",
     ctaColors: "Renkleri İncele",
     ctaApps: "Uygulamaları Gör",
     ctaCatalog: "Katalog İste",
@@ -185,7 +166,7 @@ const translations = {
       ["134", "Yıllık geçmiş"],
     ],
     stats: [
-      ["29+", "Yıllık marangozluk deneyimi"],
+      ["29+", "Yıllık deneyim"],
       ["280×210", "Melamin / Lak Panel"],
       ["280×122", "High Gloss"],
     ],
@@ -193,12 +174,11 @@ const translations = {
     categoryTitle: "Ürün Kategorileri",
     categorySub: "Kullanıma, parlaklığa, dayanıklılığa ve son görünüme göre doğru yüzeyi seçin.",
     colorsTitle: "Renkler ve Uygulamalar",
-    colorsSub: "Rengi seçin; mutfak, dolap, masa veya dekor içinde nasıl göründüğünü inceleyin.",
+    colorsSub: "Rengi seçin ve mekanda nasıl göründüğünü anında görün.",
     appLabel: "Gerçek Uygulama Önizlemesi",
     colorLabel: "Renk Kodu",
     categoryLabel: "Kategori",
     productInfo: "Renk Açıklaması",
-    source: "Resmi ürün sayfası",
     orderColor: "Bu Rengi İste",
     finalTitle: "Projeniz için doğru paneli seçmeye hazır mısınız?",
     finalSub: "Katalog, fiyat, kesim, kenar bantlama ve proje detayları için bize ulaşın.",
@@ -206,16 +186,16 @@ const translations = {
     socialTitle: "Sosyal Medya",
     categories: {
       all: ["Tümü", "Tüm renkler"],
-      melamin: ["Melamin", "280×210", "Yüksek pres kalitesi; mutfak, dolap, kapı, yatak odası ve masa için pratik yüzey."],
-      highGloss: ["High Gloss", "280×122", "Ayna parlaklığında modern ve lüks yüzey; mutfak, dolap ve ofisler için ideal."],
-      lakPanel: ["Lak Panel", "280×210", "Sağlam MDF, dekor ve primer katmanlar, UV koruma, çizilme, nem ve ısı dayanımı."],
+      melamin: ["Melamin", "280×210", "Mutfak, dolap, kapı ve günlük kullanım için güçlü ve pratik yüzey."],
+      highGloss: ["High Gloss", "280×122", "Ayna parlaklığında modern, lüks ve dikkat çekici yüzey."],
+      lakPanel: ["Lak Panel", "280×210", "Sağlam MDF, primer katmanlar, UV koruma, nem, ısı ve çizilme dayanımı."],
     },
   },
 };
 
 const categoryKeys = ["all", "melamin", "highGloss", "lakPanel"];
 
-function SocialIcon({ type = "whatsapp" }) {
+function SocialIcon({ type }) {
   switch (type) {
     case "pinterest":
       return <FaPinterestP />;
@@ -230,6 +210,7 @@ function SocialIcon({ type = "whatsapp" }) {
     case "twitter":
       return <BsTwitterX />;
     case "whatsapp":
+      return <FaWhatsapp />;
     default:
       return <FaWhatsapp />;
   }
@@ -257,7 +238,7 @@ export default function App() {
     <div className="site" dir={t.dir}>
       <header className="header">
         <a className="logo logo-image" href="#home">
-          <img src="/images/applications/logos.png" alt="YILDIZ Logo" />
+          <img src={BASE + "images/applications/logos.png"} alt="YILDIZ Logo" />
         </a>
 
         <nav className="nav">
@@ -276,7 +257,7 @@ export default function App() {
       <main>
         <section className="hero" id="home">
           <div className="hero-bg">
-            <img src={selected.app} alt={`${selected.name} ${selected.code}`} />
+            <img src={selected.app} alt={selected.name} />
           </div>
           <div className="hero-overlay"></div>
 
@@ -358,7 +339,7 @@ export default function App() {
           <div className="combo-layout">
             <div className="combo-preview">
               <div className="preview-image">
-                <img src={selected.app} alt={`${selected.name} ${selected.code}`} />
+                <img src={selected.app} alt={selected.name} />
               </div>
 
               <div className="preview-info">
@@ -372,15 +353,9 @@ export default function App() {
                   <small>{selected.desc[lang]}</small>
                 </div>
 
-                <div className="hero-actions">
-                  <a className="btn main" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">
-                    {t.orderColor}
-                  </a>
-
-                  <a className="btn ghost" href={selected.sourceUrl} target="_blank" rel="noreferrer">
-                    {t.source}
-                  </a>
-                </div>
+                <a className="btn main" href="https://wa.me/0000000000" target="_blank">
+                  {t.orderColor}
+                </a>
               </div>
             </div>
 
@@ -405,7 +380,7 @@ export default function App() {
                     className={`mini-card ${selected.code === product.code ? "active" : ""}`}
                     onClick={() => setSelected(product)}
                   >
-                    <img src={product.image} alt={`${product.name} ${product.code}`} />
+                    <img src={product.image} alt={product.name} />
                     <div>
                       <h4>{product.name}</h4>
                       <p>{t.colorLabel}: {product.code}</p>
@@ -426,19 +401,19 @@ export default function App() {
           </div>
 
           <div className="cta-box">
-            <a className="btn main" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">
-              <SocialIcon /> {t.whatsapp}
+            <a className="btn main" href="https://wa.me/0000000000" target="_blank">
+              <SocialIcon type="whatsapp" /> {t.whatsapp}
             </a>
 
             <div className="social-block">
               <h3>{t.socialTitle}</h3>
               <div className="social-row">
-                <a href="#" target="_blank" rel="noreferrer"><SocialIcon type="pinterest" /></a>
-                <a href="#" target="_blank" rel="noreferrer"><SocialIcon type="instagram" /></a>
-                <a href="#" target="_blank" rel="noreferrer"><SocialIcon type="twitter" /></a>
-                <a href="#" target="_blank" rel="noreferrer"><SocialIcon type="youtube" /></a>
-                <a href="#" target="_blank" rel="noreferrer"><SocialIcon type="facebook" /></a>
-                <a href="#" target="_blank" rel="noreferrer"><SocialIcon type="linkedin" /></a>
+                <a href="#" target="_blank"><SocialIcon type="pinterest" /></a>
+                <a href="#" target="_blank"><SocialIcon type="instagram" /></a>
+                <a href="#" target="_blank"><SocialIcon type="twitter" /></a>
+                <a href="#" target="_blank"><SocialIcon type="youtube" /></a>
+                <a href="#" target="_blank"><SocialIcon type="facebook" /></a>
+                <a href="#" target="_blank"><SocialIcon type="linkedin" /></a>
               </div>
             </div>
           </div>
@@ -448,7 +423,7 @@ export default function App() {
       <footer className="footer">
         <div>
           <a className="footer-logo" href="#home">
-            <img src="/images/applications/logos.png" alt="YILDIZ Logo" />
+            <img src={BASE + "images/applications/logos.png"} alt="YILDIZ Logo" />
           </a>
           <p>{t.heroSub}</p>
         </div>
@@ -462,17 +437,17 @@ export default function App() {
 
         <div>
           <h4>{t.nav[4]}</h4>
-          <a href="https://wa.me/0000000000" target="_blank" rel="noreferrer">{t.whatsapp}</a>
+          <a href="https://wa.me/0000000000" target="_blank">{t.whatsapp}</a>
           <a href="#">Instagram</a>
           <a href="#">Facebook</a>
           <a href="#">TikTok</a>
         </div>
 
-        <div className="footer-bottom">© 2026 YILDIZ Al-Waha</div>
+        <div className="footer-bottom">© 2026 YILDIZ</div>
       </footer>
 
-      <a className="float-whatsapp" href="https://wa.me/0000000000" target="_blank" rel="noreferrer">
-        <SocialIcon />
+      <a className="float-whatsapp" href="https://wa.me/0000000000" target="_blank">
+        <SocialIcon type="whatsapp" />
       </a>
     </div>
   );
