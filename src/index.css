@@ -1069,3 +1069,192 @@ a {
     padding-top: 145px;
   }
 }
+
+/* =========================
+   MOBILE FINAL CLEAN VERSION
+   ========================= */
+
+@media (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto !important;
+    min-height: 148px !important;
+    padding: 14px 14px 16px !important;
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-rows: auto auto !important;
+    gap: 14px !important;
+    background: rgba(246, 241, 232, 0.96) !important;
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(80, 55, 30, 0.14);
+    z-index: 999;
+  }
+
+  .logo-image {
+    grid-column: 1 / 2 !important;
+    grid-row: 1 !important;
+    justify-self: start !important;
+    align-self: center !important;
+  }
+
+  .logo-image img {
+    display: block !important;
+    height: 42px !important;
+    max-width: 130px !important;
+    object-fit: contain !important;
+  }
+
+  .lang {
+    grid-column: 2 / 3 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+    align-self: center !important;
+    width: 54px !important;
+    height: 40px !important;
+    font-size: 13px !important;
+  }
+
+  .nav {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 6px !important;
+    padding: 8px !important;
+    border-radius: 24px !important;
+    background: rgba(255, 255, 255, 0.78) !important;
+    border: 1px solid rgba(90, 65, 36, 0.14) !important;
+    box-shadow: 0 12px 30px rgba(70, 45, 25, 0.08) !important;
+    overflow: visible !important;
+  }
+
+  .nav a {
+    min-width: 0 !important;
+    width: 100% !important;
+    padding: 11px 4px !important;
+    border-radius: 16px !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    color: #3d3024 !important;
+    background: rgba(246, 241, 232, 0.78) !important;
+  }
+
+  .nav a:hover {
+    background: #3e4d31 !important;
+    color: #fff !important;
+  }
+
+  .hero {
+    min-height: 100vh !important;
+    padding: 190px 18px 70px !important;
+  }
+
+  .hero-content {
+    max-width: 100% !important;
+  }
+
+  .badge {
+    max-width: 100% !important;
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+    border-radius: 22px !important;
+  }
+
+  .hero-title {
+    gap: 14px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero-title span {
+    font-size: 38px !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+  }
+
+  .hero-title strong {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 14px 18px !important;
+    font-size: 22px !important;
+    line-height: 1.5 !important;
+    border-radius: 24px !important;
+  }
+
+  .hero p {
+    max-width: 100% !important;
+    padding: 18px 18px !important;
+    font-size: 17px !important;
+    line-height: 1.9 !important;
+    border-radius: 24px !important;
+  }
+
+  .hero-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin-top: 26px !important;
+  }
+
+  .btn {
+    width: 100% !important;
+    min-height: 58px !important;
+    font-size: 16px !important;
+  }
+
+  .float-whatsapp {
+    width: 58px !important;
+    height: 58px !important;
+    right: 18px !important;
+    bottom: 18px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    min-height: 142px !important;
+    padding: 12px 10px 14px !important;
+  }
+
+  .logo-image img {
+    height: 38px !important;
+    max-width: 118px !important;
+  }
+
+  .nav {
+    gap: 5px !important;
+    padding: 7px !important;
+  }
+
+  .nav a {
+    font-size: 11px !important;
+    padding: 10px 2px !important;
+  }
+
+  .hero {
+    padding-top: 180px !important;
+  }
+
+  .hero-title span {
+    font-size: 34px !important;
+  }
+
+  .hero-title strong {
+    font-size: 20px !important;
+  }
+
+  .hero p {
+    font-size: 16px !important;
+  }
+}
